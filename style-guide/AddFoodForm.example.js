@@ -6,8 +6,17 @@ import { Divider, Input } from 'antd';
 
 // Iteration 4
 function AddFoodForm(props) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(
+      `Let's pretend we're sending an email to Valery about the new band member`,
+      formData
+    );
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <Divider>Add Food Entry</Divider>
 
       <label>Name</label>
